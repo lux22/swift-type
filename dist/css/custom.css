@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.swift-bg {
+    background: #242582;
+}
+
+.swift-color-secondary {
+    color: white;
+}
+
+.swift-footer-padding {
+    padding: 0.5rem;
+}
+
+#bgimage {
+    position: relative;
+}
+
+.btn {
+    background: #f64c72;
+}
+
+.btn:hover, btn:active {
+    background: #be3754;
+}
+
+.bgimage-overlay {
+    z-index: 0;
+}
+
+#bgimage {
+    background: url(../images/swift-bg.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+#bgimage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #252582a1;
+    z-index: -1;
+    /* opacity: 3.8; */
+}
+
+nav ul a {
+    line-height: 38px;
+    border: 1px solid #ddd;
+    margin-top: 1rem;
+}
+
+.swift-info {
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.swift-seconds {
+    color: #fff;
+}
+
+.swift-modal-header, .swift-count {
+    color: #f64c72;
+}
+
+.swift-word-box {
+    margin-top: 5vh;
+    font-size: 4.5rem;
+    color: #f64c72;
+    border: 1px solid #fff;
+}
+
+.swift-word-box p {
+    margin: 0;
+}
+
+.siwft-score-time {
+    width: 100%;
+}
+
+.swift-score, .swift-time {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin-top: 5vh;
+    text-align: center;
+    float: left;
+    padding: 0rem 1.5rem;
+}
+
+.swift-playscore, .swift-playtime {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #242682a8;
+    color: #f64c72;
+}
+
+.swift-playscore>p, .swift-playtime>p {
+    color: #fff;
+}
+
+.swift-playscore p i, .swift-playtime p i {
+    position: relative;
+    top: 7px;
+}
+
+.swift-score-value, .swift-time-value {
+    font-size: 1.5rem;
+}
+
+.swift-status>.swift-text-size {
+    font-size: 1.5rem;
+}
+
+.swift-score-value span, .swift-time-value span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4af7f7;
+}
+
+.swift-status-icon>i {
+    color: #be3754;
+}
