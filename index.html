@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <meta http-equiv="X-UA-Compatable" content="ie=edge">
+    <title>Swift-Typing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav class="swift-bg">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="brand-logo"><b>Swift</b>-Typing&nbsp;<i class="far fa-keyboard"></i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li>
+                                <a href="#modal1" class="waves-effect waves-light btn modal-trigger">Instruction</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="modal1" class="modal scale-transition ">
+            <div class="modal-content center-align">
+                <i class="fas fa-gamepad fa-3x"></i>
+                <h4>How to <b class="swift-modal-header">play</b></h4>
+                <p>Type the word that comes in the word box within seconds and score points.To restart or begin please type
+                    in the word again.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat"><span>Agree</span></a>
+            </div>
+        </div>
+        <div id="modal2" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Modal Header</h4>
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+            </div>
+        </div>
+        <div id="baner-image">
+            <div class="col s12 m12">
+                <div class="col s12 m12 bgimage-overlay" id="bgimage">
+                    <div class="swift-info">
+                        <div class="container center-align">
+                            <p class="swift-seconds">Type in the words within <span class="swift-count">5</span>&nbsp;sec</p>
+                        </div>
+                        <div class="container center-align swift-word-box">
+                            <p></p>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="swift-score-time ">
+                                    <div class="swift-score">
+                                        <div class="col s12 m12 swift-playscore z-depth-1">
+                                            <!-- <h4><i class="small material-icons">developer_board</i></h4> -->
+                                            <p class="swift-score-value"><i class="small material-icons">developer_board</i>&nbsp;Score
+                                                :&nbsp;
+                                                <span class="swift-score-number"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="swift-time">
+                                        <div class="col s12 m12 swift-playtime z-depth-1">
+                                            <!-- <h4><i class="small material-icons">access_alarms</i></h4> -->
+                                            <p class="swift-time-value"><i class="small material-icons">access_alarms</i>&nbsp;Time
+                                                :&nbsp;
+                                                <span class="swift-time-left">05</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="card transparent swift-status hide">
+                                <div class="card-content white-text center-align swift-status-icon">
+                                    <i class="medium material-icons">report</i>
+                                    <span class="card-title swift-text-size">Game Over</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="row">
+                                    <div class="container">
+                                        <div class="input-field col s12 center-align">
+                                            <i class="material-icons prefix">keyboard</i>
+                                            <input type="text" id="autocomplete-input" class="autocomplete center-align wordinput">
+                                            <label for="autocomplete-input text-center">Type the word</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-copyright swift-bg">
+            <div class="container center swift-color-secondary swift-footer-padding">
+                © 2018 Copyright Text
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.2.0/js/all.js" integrity="sha384-4oV5EgaV02iISL2ban6c/RmotsABqE4yZxZLcYMAdG7FAPsyHYAPpywE9PJo+Khy"
+        crossorigin="anonymous"></script>
+    <script src="js/wordapi.js"></script>
+    <script src="js/custom.js"></script>
