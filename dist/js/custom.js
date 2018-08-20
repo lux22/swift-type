@@ -20,8 +20,8 @@ let fnswiftPlayUI = (function() {
     score: document.querySelector(domCache.socre),
     time: document.querySelector(domCache.time),
     status: document.querySelector(domCache.status),
-    input: document.querySelector(domCache.inputvalue),
-    inputval: document.querySelector(domCache.inputvalue).value
+    input: document.querySelector(domCache.inputvalue)
+    // inputval: document.querySelector(domCache.inputvalue).value
   };
 })();
 
@@ -32,15 +32,17 @@ let fnsiwftWordApi = (function(interface) {
   let wordapi = new fnwordApi();
 
   let callbackwithdata = function(err, res) {
-    //Store split items
-    str = String(res.body);
-    let words = str.match(/\b(\w+)\b/g);
+    if (err) {
+    } else {
+      str = String(res.body);
+      let words = str.match(/\b(\w+)\b/g);
 
-    let words_index = Math.floor(Math.random() * words.length);
+      let words_index = Math.floor(Math.random() * words.length);
 
-    word_generate = words[words_index];
+      word_generate = words[words_index];
 
-    interface.wordbox.innerHTML = word_generate;
+      interface.wordbox.innerHTML = word_generate;
+    }
   };
 
   //API Request
@@ -60,6 +62,7 @@ let fnswiftPlayController = (function(interface, wordapi) {
   let swiftTime = 5;
   let score = 0;
   let isgamestatus;
+
   interface.score.innerHTML = score;
 
   //Game init
@@ -86,6 +89,7 @@ let fnswiftPlayController = (function(interface, wordapi) {
   let fnwordEqual = function() {
     let inputvalue = document.querySelector("#autocomplete-input").value;
     if (inputvalue === interface.wordbox.innerHTML) {
+      getvalue = inputvalue;
       score++;
       M.toast({ html: `${score}`, displayLength: 700 });
       return true;
